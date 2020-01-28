@@ -1,0 +1,269 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    title みんなで作る社会科単語帳
+    style.
+      body {
+        margin: 0;
+      }
+      #a-box {
+        text-align: center;
+        background-color: #FF6347;
+        padding: 7px;
+        margin-bottom: 30px;
+        position: fixed;
+        width: 100%;
+      }
+      #b-box {
+        margin-top: 150px;
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-bottom: 30px;
+        width: 470px;
+        float: left;
+      }
+      #c-box {
+        margin-top: 150px;
+        margin-left: 3%;
+        margin-bottom: 30px;
+        float: left;
+      }
+      #d-box {
+        margin-left: 3%;
+        margin-bottom: 30px;
+        float: left;
+      }
+      #e-box {
+        bottom: 0;
+        background-color: none;
+        float: left;
+        margin-left: 3%;
+        margin-bottom: 30px;
+      }
+      .title {
+        color: white;
+        font-family: 'Hiragino Maru Gothic Pro';
+        font-size: 35px;
+      }
+      .newcoment {
+        font-family: serif;
+        font-size: 60px;
+        font-weight: bold;
+        margin: auto;
+        text-shadow: 3px 3px 0 #FF9872;
+      }
+      .toPost {
+        font-size: 30px;
+        border-bottom: solid 3px #FF6347;
+      }
+      .name-input {
+        font-size: 1.5em;
+        width: 300px;
+        border-style: solid;
+        border-width: 1.5px;
+        border-color: #FFC7AF;
+      }
+      .description-text-area {
+        font-size: 1.5em;
+        width: 450px;
+        border-style: solid;
+        border-width: 1.5px;
+        border-color: #FFC7AF;
+      }
+      .select-board {
+        font-size: 1.5em;
+        width: 300px;
+        border-style: solid;
+        border-width: 1.5px;
+        border-color: #FFC7AF;
+        margin-bottom: 60px;
+      }
+      .reset {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        z-index: 2;
+        background-color: none;
+        color: #FF9872;
+        font-weight: bold;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px;
+        border: none;
+      }
+      .reset:hover {
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .reset:after {
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: #FF9872;
+        transform: scale(0, 1);
+        transform-origin: right top;
+        transition: transform .3s;
+      }
+      .reset:hover::after {
+        transform-origin: left top;
+        transform: scale(1, 1);
+      }
+      .commit {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        z-index: 2;
+        float: right;
+        background-color: none;
+        color: #FF6347;
+        font-weight: bold;
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px;
+        border: none;
+      }
+      .commit:hover {
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .commit:after {
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: #FF6347;
+        transform: scale(0, 1);
+        transform-origin: right top;
+        transition: transform .3s;
+      }
+      .commit:hover::after {
+        transform-origin: left top;
+        transform: scale(1, 1);
+      }
+      .Introduction {
+        color: #FF6600;
+        font-family: 'arial unicode ms';
+        font-weight: bold;
+        margin: auto;
+        text-shadow: 3px 3px 0 #FFC7AF;
+        font-size: 35px;
+      }
+      p {
+        line-height: 3;
+        font-size: 20px;
+      }
+      .see, .practice {
+        color: #FF6600;
+        font-family: 'arial unicode ms';
+        font-weight: bold;
+        margin: auto;
+        text-shadow: 3px 3px 0 #FFC7AF;
+        font-size: 35px;
+      }
+      .worldhistory {
+        background-color: white;
+        color: #00FF3B;
+        font-size: 20px;
+        border-color: #00FF3B;
+        border-width: 0px 0px 1px 5px;
+        margin-bottom: 15px;
+        margin-right: 50px;
+        width: 150px;
+      }
+      .japanesehistory {
+        background-color: white;
+        color: brown;
+        font-size: 20px;
+        border-color: brown;
+        border-width: 0px 0px 1px 5px;
+        margin-bottom: 15px;
+        margin-right: 50px;
+        width: 150px;
+      }
+      .geography {
+        background-color: white;
+        color: green;
+        font-size: 20px;
+        border-color: green;
+        border-width: 0px 0px 1px 5px;
+        margin-bottom: 15px;     
+        margin-right: 50px;   
+        width: 150px;
+      }
+      .modernsociety {
+        background-color: white;
+        color: red;
+        font-size: 20px;
+        border-color: red;
+        border-width: 0px 0px 1px 5px;
+        margin-bottom: 15px;    
+        margin-right: 50px;    
+        width: 150px;
+      }
+      .logic {
+        background-color: white;
+        color: #8A2BE2;
+        font-size: 20px;
+        border-color: #8A2BE2;
+        border-width: 0px 0px 1px 5px;
+        margin-bottom: 15px;
+        margin-right: 50px;
+        width: 150px;
+      }
+      .politicseconomy {
+        background-color: white;
+        color: blue;
+        font-size: 20px;
+        border-color: blue;        
+        border-width: 0px 0px 1px 5px;
+        margin-bottom: 15px;
+        width: 150px;
+      }
+    
+  body
+    div(id="a-box")
+      h1(class="title") みんなで作る社会科単語帳
+
+    div(id="b-box")
+      h2(class="newcoment") 新規投稿
+      form(name="Form" method="post" action="/posts" onsubmit="return formCheck()")
+        h3(class="toPost") 単語名
+        input(type="text" name="name" maxlength="50" class="name-input")
+        h3(class="toPost") 単語の説明
+        textarea(name="description" cols=40 rows=4 class="description-text-area") 
+        h3(class="toPost") どの教科か
+        select(name="which" class="select-board")
+          option(value="WorldHistory") 世界史
+          option(value="JapaneseHistory") 日本史
+          option(value="Geography") 地理
+          option(value="ModernSociety") 現代社会
+          option(value="Logic") 論理
+          option(value="PoliticsEconomy") 政治・経済
+        br
+        button(type="reset" class="reset") リセット
+        button(type="submit" class="commit") 投稿
+
+    div(id="c-box")
+      h2(class="Introduction") みんなで作る社会科単語帳へようこそ！
+      p ここではみんなで一つの単語帳を作っていくことができます。<br>自分で単語とその説明を投稿できます。<br>他人が作った単語を閲覧することもできます。<br><span style="color: #00FF3B; font-size: 25px;">世界史</span>、<span style="color: brown; font-size: 25px;">日本史</span>、<span style="color: green; font-size: 25px;">地理</span>、<span style="color: red; font-size: 25px;">現代社会</span>、<span style="color: #8A2BE2; font-size: 25px;">論理</span>、<span style="color: blue; font-size: 25px;">政治・経済</span>があります。<br>社会科は暗記教科で覚えるのが大変なのでみんなで覚えましょう。
+   
+    div(id="d-box")  
+      h2(class="Introduction") 注意事項
+      p ・社会科と関係のない単語は投稿しないでください。<br>・他人を傷つけるような投稿は控えてください。<br>・単語の説明も記入してください。<br>・単語を投稿するときはその内容に誤りがないか確認してください。
+
+    div(id="e-box")   
+      p(class="see") 単語帳を見る
+      input(type="button" class="worldhistory" onclick="location.href='/WorldHistory'" value="世界史") 
+      input(type="button" class="japanesehistory" onclick="location.href='/JapaneseHistory'" value="日本史")    
+      input(type="button" class="geography" onclick="location.href='/Geography'" value="地理")     
+      input(type="button" class="modernsociety" onclick="location.href='/ModernSociety'" value="現代社会")     
+      input(type="button" class="logic" onclick="location.href='/Logic'" value="論理")    
+      input(type="button" class="politicseconomy" onclick="location.href='/PoliticsEconomy'" value="政治・経済") 
