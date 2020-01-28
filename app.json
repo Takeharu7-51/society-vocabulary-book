@@ -1,0 +1,6 @@
+{
+  "name": "society-vocabulary-book",
+  "description": "みんなで作る社会科単語帳",
+  "keywords": ["node"],
+  "image": "heroku/nodejs"
+}
